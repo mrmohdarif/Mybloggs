@@ -29,7 +29,7 @@ function EditPost() {
     const [Files, setFiles] = useState('')
 
       useEffect(()=>{
-        axios.post(`http://localhost:8080/post/${paramId}`,id).then((response)=>{
+        axios.post(`https://myblogbackend.vercel.app/post/${paramId}`,id).then((response)=>{
             console.log(response.data)
             // console.log(response)
             // console.log(response)

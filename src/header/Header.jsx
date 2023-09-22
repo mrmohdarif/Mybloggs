@@ -9,7 +9,7 @@ function Header() {
    const tokendata={
     jwttoken:token
    }
- axios.post("http://localhost:8080/profile",tokendata).then((response)=>{
+ axios.post("https://myblogbackend.vercel.app/profile",tokendata).then((response)=>{
    console.log(response);
    if(response.status==200)
    {

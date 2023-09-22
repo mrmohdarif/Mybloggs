@@ -24,7 +24,7 @@ const handlscroll=async()=>{
 }
 
   useEffect(()=>{
-  axios.get(`http://localhost:8080/`).then((response)=>{
+  axios.get(`https://myblogbackend.vercel.app/`).then((response)=>{
    console.log(response.data)
    setpost((prev)=>[...prev,...response.data])
    setloading(false)
