@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 function Header() {
-  const [user,setuser]=useState()
+  const [user,setuser]=useState('')
 
   useEffect(()=>{
     const token=localStorage.getItem('token')

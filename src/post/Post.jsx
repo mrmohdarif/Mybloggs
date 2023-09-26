@@ -1,5 +1,4 @@
-import React, { useState} from 'react'
-
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 function Post(props) {
   // console.log(title,summary,cover,content)
@@ -8,11 +7,13 @@ function Post(props) {
 
     return (
       <>
+    
       {props.data.map((post,index)=>{
       return <div className="post" key={index}>
      <div className="image">
       <Link to={`/post/${post._id}`}>
-      <img src={'https://arifblogserver.onrender.com/'+post.cover} alt=""/>
+      <img src={'http://localhost:8080/'+post.cover} alt=""/>
+     
       </Link> 
        </div>
         <div className="text"> 
