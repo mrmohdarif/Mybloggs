@@ -24,7 +24,7 @@ const handlscroll=async()=>{
 }
 
   useEffect(()=>{
-  axios.get(`https://myblogbackend.vercel.app/`).then((response)=>{
+  axios.get(`https://arifblogserver.onrender.com/`).then((response)=>{
    console.log(response.data)
    setpost((prev)=>[...prev,...response.data])
    setloading(false)

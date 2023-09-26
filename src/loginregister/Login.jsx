@@ -22,7 +22,7 @@ const loginData={
   pass:pass
 }
 try{
-  axios.post("http://localhost:8080/login",loginData).then((response)=>{
+  axios.post("https://arifblogserver.onrender.com/login",loginData).then((response)=>{
 
     if(response.status!==200)
     {

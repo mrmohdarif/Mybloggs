@@ -9,19 +9,17 @@ function Header() {
    const tokendata={
     jwttoken:token
    }
- axios.post("https://myblogbackend.vercel.app/profile",tokendata).then((response)=>{
+ axios.post("https://arifblogserver.onrender.com/profile",tokendata).then((response)=>{
    console.log(response);
-   if(response.status==200)
+   if(response.status===200)
    {
     setuser(response.data)
-    // window.location.reload();
+  
    }
-   
-  //  window.location.reload();
   })
-  },[])
+  },[user])
  const logout=()=>{
-  axios.post("http://localhost:8080/logout").then((response)=>{
+  axios.post("https://arifblogserver.onrender.com/logout").then((response)=>{
     localStorage.clear('token')
     setuser(null)
     // console.log(response);

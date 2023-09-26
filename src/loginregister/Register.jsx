@@ -20,7 +20,7 @@ import axios from 'axios'
       password:password
     }
     try{
-      axios.post("http://localhost:8080/register",data).then((response)=>{
+      axios.post("https://arifblogserver.onrender.com/register",data).then((response)=>{
         console.log(response);
       if(response.status!==200)
       {

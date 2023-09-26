@@ -29,7 +29,7 @@ function EditPost() {
     const [Files, setFiles] = useState('')
 
       useEffect(()=>{
-        axios.post(`https://myblogbackend.vercel.app/post/${paramId}`,id).then((response)=>{
+        axios.post(`https://arifblogserver.onrender.com/post/${paramId}`,id).then((response)=>{
             console.log(response.data)
             // console.log(response)
             // console.log(response)
@@ -72,7 +72,7 @@ function EditPost() {
           }
           // data.set('File', Files?.[0])
     // data.set('token', token)
-     axios.put('http://localhost:8080/post',data).then((response)=>{
+     axios.put('https://arifblogserver.onrender.com/post',data).then((response)=>{
         console.log(response.data)
            const result=response.data
         if(result===false)

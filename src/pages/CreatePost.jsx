@@ -56,7 +56,7 @@ function CreatePost() {
     // console.log(Files[0].name,Files[0].lastModified,Files[0].lastModifiedDate,Files[0].type)
     console.log("this is frontend", data)
     console.log(Files)
-    axios.post("https://myblogbackend.vercel.app/post", data).then((response) => {
+    axios.post("https://arifblogserver.onrender.com/post", data).then((response) => {
       console.log(response);
     })
     settitle("")

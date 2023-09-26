@@ -11,7 +11,7 @@ function Fullpostpage() {
   const token = localStorage.getItem('token')
 
   useEffect(() => {
-    axios.post(`https://myblogbackend.vercel.app/post/${paramId}`, { id, "token": token }).then((response) => {
+    axios.post(`https://arifblogserver.onrender.com/post/${paramId}`, { id, "token": token }).then((response) => {
       console.log(response)
       // autherId=response.data.verefy
       // useridpost=response.data.postdoc._id
@@ -25,7 +25,7 @@ function Fullpostpage() {
   //  console.log(fullpost.auther==fullpostauth)
   //  console.log("this1",fullpost.auther,"this2",fullpostauth)
   const handle_delete=()=>{
-    axios.post(`https://myblogbackend.vercel.app/post/delete/${paramId}`, { id, "token": token }).then((response) => {
+    axios.post(`https://arifblogserver.onrender.com/post/delete/${paramId}`, { id, "token": token }).then((response) => {
       console.log(response)
       // setfullpost(response.data.postdoc)
       // setfullpostauth(response.data.verefy)
@@ -58,7 +58,7 @@ function Fullpostpage() {
       }
 
       <div className="image">
-        <img src={`https://myblogbackend.vercel.app/${fullpost.cover}`} alt="" />
+        <img src={`https://arifblogserver.onrender.com/${fullpost.cover}`} alt="" />
       </div>
       <div className='content'>{fullpost.content}</div>
     </div>
