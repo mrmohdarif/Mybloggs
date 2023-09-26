@@ -12,7 +12,8 @@ function Post(props) {
       return <div className="post" key={index}>
      <div className="image">
       <Link to={`/post/${post._id}`}>
-      <img src={'http://localhost:8080/'+post.cover} alt=""/>
+      <img src={`https://arifblogserver.onrender.com/${post.cover}`} alt=""/>
+
      
       </Link> 
        </div>
