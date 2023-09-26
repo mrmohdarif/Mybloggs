@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,lazy,Suspense } from 'react'
+const lazyComponent=lazy(()=>import('../post/Post'))
 import Post from '../post/Post'
 import axios from 'axios'
 import Example from './Example'
@@ -39,9 +40,11 @@ const handlscroll=async()=>{
   return (
     <div>
         <main>
-        
-          <Post data={post}/>
-        <Example/>
+         {/* <Suspense fallback={<div>...loading</div>}>
+              <lazyComponent data={post}/>
+         </Suspense> */}
+    <Post data={post}/>
+          <Example/>
         
         </main>
         

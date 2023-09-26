@@ -60,7 +60,7 @@ function Fullpostpage() {
       <div className="image">
         <img src={`https://arifblogserver.onrender.com/${fullpost.cover}`} alt="" />
       </div>
-      <div className='content'>{fullpost.content}</div>
+      <div className='content'dangerouslySetInnerHTML={{__html:fullpost.content}}/>
     </div>
   )
 }
